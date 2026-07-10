@@ -190,6 +190,8 @@ description: "This skill should be used when [具體觸發情境]。"
 
 我們歡迎各種貢獻以使此知識庫更加完整。請閱讀 [CONTRIBUTING.md](CONTRIBUTING.md) 檔案以了解貢獻指南。
 
+不會用 GitHub 也沒關係——開一則 [知識/經驗投稿](../../issues/new?template=knowledge.yml)，把你的實務經驗用自己的話寫下來就好，格式交給維護者整理。
+
 ## 授權
 
 此專案採用 **分層授權** 模式：
