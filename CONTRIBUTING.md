@@ -89,6 +89,9 @@ compatibility: claude-code,opencode,agent-skills
 metadata:
   audience: architects
   region: taiwan
+  class: C
+  status: draft
+  data-currency: "YYYY-MM-DD"
 ---
 ```
 
@@ -98,7 +101,10 @@ metadata:
 | `description` | **必填**，1-1024 字，必須包含具體觸發情境，讓 AI 知道何時呼叫此技能 |
 | `license` | 可選，授權聲明 |
 | `compatibility` | 可選，相容性宣告 |
-| `metadata` | 可選，key-value 擴充欄位 |
+| `metadata.class` | **必填**，`A`／`B`／`C`（分類定義見下表） |
+| `metadata.status` | 可選，`verified`（數值已逐條查證）／`unverified`（數值未查證，AI 引用前必重查）／`draft`（骨架） |
+| `metadata.data-currency` | 建議填，`"YYYY-MM-DD"`——最後一次查證來源的日期 |
+| `metadata`（其他 key） | 可選，key-value 擴充欄位 |
 
 ### 技能分類與特殊要求
 

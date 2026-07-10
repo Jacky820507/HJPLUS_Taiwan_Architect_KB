@@ -1,6 +1,6 @@
 ---
 name: regulation-currency-check
-description: "This skill should be used before quoting any normative number (dimension, ratio, monetary threshold, penalty, vendor specification) from memory or from another skill in this knowledge base, when a skill's data is older than one year or carries no date, when the topic is in a high-churn regulatory domain (building code amendments, accessibility standards, green-building versions, procurement thresholds), or when a skill is marked status: unverified."
+description: "This skill should be used when about to quote any normative number (dimension, ratio, monetary threshold, penalty, vendor specification) from memory or from another skill in this knowledge base, when a skill's data is older than one year or carries no date, when the topic is in a high-churn regulatory domain (building code amendments, accessibility standards, green-building versions, procurement thresholds), or when a skill is marked status: unverified."
 user-invocable: true
 license: CC-BY-SA-4.0
 compatibility: claude-code,opencode,agent-skills
@@ -63,7 +63,14 @@ Every skill (and every consulting answer) that contains normative numbers should
 - Volatility: HIGH — this chapter amended repeatedly; re-verify before permit submission
 ```
 
-Demonstration of the convention on a live example: the procurement 公告金額 was raised to NT$1.5 million effective 2023-01-01 (工程會 announcement) — **[Secondary, 2026-07-10]** — re-verify via 工程會 before relying on it, because threshold announcements supersede any KB snapshot.
+How a `[Secondary]` fact must be rendered in an answer — the block below is a **formatting sample only**; its figure may already be outdated by the time you read this, which is exactly the point:
+
+```text
+公告金額為新臺幣 150 萬元（工程會公告，2023-01-01 生效）[Secondary, 2026-07-10]
+——本數字未逐條查證，引用前請以工程會現行公告確認。
+```
+
+Threshold announcements supersede any KB snapshot; never lift the figure out of a sample like this without re-verification.
 
 ## Section 5: High-Churn Domains (查證優先名單)
 
