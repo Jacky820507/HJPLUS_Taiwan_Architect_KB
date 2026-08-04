@@ -25,6 +25,8 @@
 <details>
 <summary>點開查看近期已合併的 PR（感謝所有貢獻者！）</summary>
 
+- **2026-08-04** 🏢 修正智慧建築標章 4.2.2 空調系統智慧化節能計算範例的積分加總值（49→59，已向台灣智慧建築協會確認）([#43](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB/pull/43) by @Jen666-Tw)
+- **2026-08-04** 🗺️ 臺中市地址地號查詢新增建築線免指地區／軍事禁限建、文化資產查詢與快速摘要（查詢來源 9 → 11 個）([#42](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB/pull/42) by @ottina；配對邏輯與報告警示於 [#44](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB/pull/44) 補強)
 - **2026-07-27** 🏛️ 新增臺北市建築物附置裝飾性構造物設計範例彙編技能（113年9月25日最新發布實施規範）([#41](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB/pull/41) by @CWLin0518)
 - **2026-07-24** 🚰 新增建築物給水排水設備設計技術規範技能（涵蓋水箱容量、管徑坡度、存水彎、通氣管與截留器等）([#39](https://github.com/h30190/HJPLUS_Taiwan_Architect_KB/pull/39) by @ChimingLu)
 
