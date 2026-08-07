@@ -66,6 +66,13 @@ Pre-commit hook (`.pre-commit-config.yaml`): runs `python scripts/run_graphify.p
 carry it; new skills must declare it. The class-assignment reference table is `SECTION_CLASS` in
 `scripts/update_readme_counts.py` — keep the two consistent.
 
+`scripts/validate_okf.py` warns when a `B` skill carries no `<!-- TODO: Taiwan adaptation needed -->`
+marker. When that warning fires, first ask whether the skill is international at all: a skill built on
+Taiwan's own regulations or labels (台電/自來水/電信規範, EEWH, 低碳建築標示, 室內空氣品質管理法) is
+`C`, and reclassifying it is the fix — do not insert a marker to silence the warning. Only genuinely
+international content (ASHRAE, AISC/ACI, ISO/ASTM, IBC/NFPA, LEED, WELL) is `B`, and there the marker
+goes immediately before the block whose specs are not yet localized, naming the standards it follows.
+
 **`metadata.status`** (optional, but load-bearing when present):
 
 | Value | Meaning | Reader behavior |
@@ -145,13 +152,13 @@ OKF §11 requires every non-reserved `.md` to carry frontmatter with a non-empty
 | `domain.md` | `Knowledge Entry` | Plus `title` copied from the document's `# H1` |
 | `index.md` | — | Reserved (§8) |
 | `log.md` | — | Reserved (§9) |
+| Other loose `.md` (e.g. under `references/`) | `Reference` | Supporting material that is not itself a skill |
 | `README.md` | — | **Deliberate deviation**, see below |
 
 **`README.md` is exempt.** READMEs are human-facing GitHub navigation; adding
 frontmatter would render a metadata table above every page for no agent benefit.
 §11 forbids consumers from rejecting a bundle over missing fields, so the bundle
-stays usable. Loose `.md` under `references/` are reported as warnings — give
-them a `type` when you touch them.
+stays usable.
 
 There is no central OKF type registry: producers pick descriptive values and
 consumers must tolerate unknown ones. Do not invent new types without adding
